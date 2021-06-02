@@ -7,8 +7,8 @@ import gifts.gift;
 
 public class PZ_4_2 {
     public static void main(String[] args) {
-        double weightCounter;
-        double priceCounter;
+        double weightCounter = 0;
+        double priceCounter=0;
 
         System.out.println("В мешке с подарками находятся:");
         Candy candy = new Candy("Snickers",2.0,5000.00,"Chocolate-black");
@@ -19,8 +19,14 @@ public class PZ_4_2 {
         for (gift somegifts: bagOfGifts) {
             System.out.println(somegifts.toString());
         }
-        weightCounter = candy.getWeight() + Vesta.getWeight() + playStation4.getWeight();
-        priceCounter = candy.getPrice() + Vesta.getPrice() + playStation4.getPrice();
+
+        for (int i =0;i<bagOfGifts.length;i++){
+            weightCounter += bagOfGifts[i].getWeight();
+        }
+
+        for (int i =0;i<bagOfGifts.length;i++){
+            priceCounter += bagOfGifts[i].getPrice();
+        }
 
         System.out.println("\nОбщий вес подарка: " + weightCounter + " кг" + "\nОбщая стоимость подарка: " + priceCounter + " руб");
     }
