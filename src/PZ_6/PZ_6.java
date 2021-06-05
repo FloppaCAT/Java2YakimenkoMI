@@ -30,7 +30,7 @@ public class PZ_6 {
         return arrList;
     }
 
-    public static void mapCount (String str1){
+    private static void mapCount (String str1){
         HashMap<String, Integer> wordToCount = new HashMap<>();
         int maxKey = 0;
         for (String i : arrayOfList(str1))
